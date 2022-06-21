@@ -23,9 +23,6 @@ function validateUser(userObj) {
     result = validateLib.checkRequired("age", userObj.age);
     if (result.isNotValid) { return result; }
 
-    /* Aufgabe 4a:
-           Validierung auf vorhandensein von Vornamen, Nachnamen
-        */
     result = validateLib.checkRequired("firstname", userObj.firstname);
     if (result.isNotValid) { return result; }
 
@@ -39,10 +36,6 @@ function validateUser(userObj) {
     result = validateLib.checkLength("password", userObj.password, 6, 25);
     if (result.isNotValid) { return result; }
 
-    /* Aufgabe 4b:
-       Validierung auf vorhandensein von der Länge
-       für Vorname (2 bis 20) und Nachname (2 bis 50)
-    */
     result = validateLib.checkLength("firstname", userObj.firstname, 2, 20);
     if (result.isNotValid) { return result; }
 
@@ -53,18 +46,11 @@ function validateUser(userObj) {
     result = validateLib.checkEmail("email", userObj.email);
     if (result.isNotValid) { return result; }
 
-    /* Aufgabe 4c:
-      Validierung der Telefonnumer ähnlich wie bei der Email mit einer
-      Regular expression (regex). Für eine geeignete regex suchen Sie
-      im Internet nach "javascript regular expression for mobile number"
-*/
     //check phone syntax
     result = validateLib.checkPhone("phone", userObj.phone);
     if (result.isNotValid) { return result; }
 
-    /* Aufgabe 4d:
-        Validierung, ob Person volljährig ist
-     */
+//check if user is volljährig
     result = validateLib.checkAge("age", userObj.age);
     if (result.isNotValid) { return result; }
     //all inputs are valid and isNotValid=false

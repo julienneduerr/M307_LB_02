@@ -69,11 +69,7 @@ function checkLength(id, input, min, max) {
     }
     return result;
 }
-/* Aufgabe 2:
-    Validieren Sie die Mobile-Nummer ähnlich wie bei der Email mit einer
-    Regular expression (regex). Für eine geeignete regex suchen Sie
-    im Internet nach "javascript regular expression for mobile number".
-*/
+
 // Check phone is valid
 function checkPhone(id,input) {
     //Default: is valid
@@ -91,9 +87,6 @@ function checkPhone(id,input) {
     return result;
 }
 
-/* Aufgabe 3:
-  Überprüfen, ob Person volljährig ist
-*/
 function checkAge(id,input) {
     //Default: is valid
     let result = {
