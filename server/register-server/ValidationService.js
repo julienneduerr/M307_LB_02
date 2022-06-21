@@ -50,7 +50,7 @@ function validateUser(userObj) {
     result = validateLib.checkPhone("phone", userObj.phone);
     if (result.isNotValid) { return result; }
 
-//check if user is volljährig
+    //check if user is volljährig
     result = validateLib.checkAge("age", userObj.age);
     if (result.isNotValid) { return result; }
     //all inputs are valid and isNotValid=false
